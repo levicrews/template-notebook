@@ -2,12 +2,12 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{graphicx}
-\usepackage[onehalfspacing]{setspace}
 \usepackage[unicode=true,
  bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
  breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=false,colorlinks=true]
  {hyperref}
 \usepackage{verbatim}
+\usepackage{dirtytalk}
 \usepackage{appendix}
 \usepackage{mathtools}
 \usepackage{url}
@@ -20,7 +20,7 @@
 
 \hypersetup{
 	pdftex,
-    pdfauthor={Jonathan I. Dingel and friends},     % author
+    pdfauthor={Levi Crews},     % author
     colorlinks=true,       % false: boxed links; true: colored links
     linkcolor=red,          % color of internal links
     citecolor=black,        % color of links to bibliography
@@ -28,31 +28,26 @@
 }
 
 % CUSTOM DEFINITIONS
-\urldef{\dingelhomepage}\url{http://faculty.chicagobooth.edu/jonathan.dingel/}
-\urldef{\dingelemail}\url{jdingel@chicagobooth.edu}
+% \urldef{\crewshomepage}\url{}
+\urldef{\crewsemail}\url{lgc7@chicagobooth.edu}
 \newtheorem{proposition}{Proposition}
 
 % IDENTIFYING INFORMATION
-\title{A paper}
-\author{Jonathan I. Dingel\thanks{\dingelemail} \\ Chicago Booth and NBER}
+\title{}
+\author{Levi Crews\thanks{\crewsemail} \\ Chicago}
 \date{\monthname[\the\month] \the\year}
 
 
 \begin{document}
-\bibliographystyle{../bib/aeanobold}
+\bibliographystyle{../bib/jpe}
 
 % -----------------------------------------------
 % 	ABSTRACT
 % -----------------------------------------------
 
 \begin{abstract}
-%\noindent  \input{./sections/abstract.tex}
+%\noindent  \input{sections/abstract.tex}
 \end{abstract}
-\vspace{1cm}
-{\small
-\noindent \textit{Keywords}:  \\
-\textit{JEL codes}: 
-}
 \thispagestyle{empty}
 \newpage
 \setcounter{page}{1}
@@ -61,28 +56,23 @@
 % 	BODY
 % -----------------------------------------------
 
-%\input{./sections/intro.tex}
-%\input{./sections/theory.tex}
-%\input{./sections/estimation.tex}
-%\input{./sections/discussion.tex}
+%\input{sections/<your-section>.tex}
 
 % -----------------------------------------------
 % 	REFERENCES
 % -----------------------------------------------
 
-\bibliography{../bib/bib.bib}{}
+%\bibliography{../bib/<your-bib>.bib}{}
 
 \newpage
 \clearpage
 
-\begin{center} \Large \textbf{Appendix -- For Online Publication} \end{center}
+\begin{center} \Large \textbf{Appendix} \end{center}
 \appendix
 \numberwithin{equation}{section}
 \numberwithin{figure}{section}
 \numberwithin{table}{section}
 
-%\input{./sections/appendix_theory}
-%\input{./sections/appendix_data.tex}
-%\input{./sections/appendix_empirics.tex}
+%\input{sections/<your-appendix>.tex}
 
 \end{document}

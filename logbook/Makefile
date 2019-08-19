@@ -1,8 +1,8 @@
-logbookentries := $(shell grep '\\input{.*entries' logbook.tex | sed 's/^.*\\input{\(.*\.tex\).*/\1/')
+notebookentries := $(shell grep '\\input{.*entries' notebook.tex | sed 's/^.*\\input{\(.*\.tex\).*/\1/')
 
-all: logbook.pdf
+all: notebook.pdf
 
-logbook.pdf: logbook.tex $(logbookentries)
-	pdflatex -draftmode logbook.tex
-	pdflatex logbook.tex
-	rm logbook.log logbook.out logbook.toc logbook.aux
+notebook.pdf: notebook.tex $(notebookentries)
+	pdflatex -draftmode notebook.tex
+	pdflatex notebook.tex
+	rm notebook.log notebook.out notebook.toc notebook.aux
